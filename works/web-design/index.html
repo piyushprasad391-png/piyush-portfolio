@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web Design — Nexora Landing Page | Piyush Prasad</title>
+<meta name="description" content="Web Design — Premium landing pages, responsive layouts and visual direction.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--bg:#f7fbff;--ink:#08111f;--muted:#65748a;--line:rgba(8,17,31,.10);--blue:#1677ff;--cyan:#16c9df;--violet:#7057ff;--card:rgba(255,255,255,.78);--shadow:0 30px 90px rgba(28,67,122,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 78% 8%,rgba(22,119,255,.15),transparent 25%),radial-gradient(circle at 12% 45%,rgba(22,201,223,.12),transparent 27%),radial-gradient(circle at 80% 78%,rgba(112,87,255,.10),transparent 28%),linear-gradient(180deg,#fcfeff,#f3f8ff)}
+.wrap{width:min(1180px,91%);margin:auto}.nav{position:fixed;z-index:20;top:16px;left:50%;transform:translateX(-50%);width:min(1050px,92%);height:62px;padding:0 14px 0 20px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.72);backdrop-filter:blur(22px);box-shadow:0 14px 50px rgba(25,65,110,.08);display:flex;align-items:center;justify-content:space-between}
+.brand{font:700 17px "Space Grotesk";letter-spacing:-.05em;text-decoration:none;color:var(--ink)}.brand span{color:var(--blue)}.links{display:flex;gap:28px}.links a{font-size:12px;color:#66748a;text-decoration:none}.links a:hover{color:var(--ink)}.hire{padding:11px 16px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;text-decoration:none;font-size:12px;font-weight:800;box-shadow:0 12px 28px rgba(25,118,255,.25)}
+.hero{min-height:100vh;padding:145px 0 70px;display:grid;grid-template-columns:.82fr 1.18fr;align-items:center;gap:45px}.back{font-size:12px;color:var(--blue);text-decoration:none;font-weight:700}.eyebrow{display:flex;align-items:center;gap:12px;color:#8492a7;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:30px 0 10px}.num{font:700 72px/.8 "Space Grotesk";color:rgba(22,119,255,.20)}
+h1{font:700 clamp(52px,7vw,92px)/.9 "Space Grotesk";letter-spacing:-.075em;margin:15px 0 22px}.gradient{background:linear-gradient(110deg,var(--blue),var(--cyan) 48%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:510px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.btn{border:1px solid var(--line);border-radius:14px;padding:13px 18px;text-decoration:none;font-size:12px;font-weight:800;color:var(--ink);background:rgba(255,255,255,.66);backdrop-filter:blur(14px);transition:.35s}.btn.primary{border:0;color:#fff;background:linear-gradient(135deg,var(--blue),var(--violet));box-shadow:0 15px 30px rgba(25,118,255,.23)}.btn:hover{transform:translateY(-3px)}
+.stage{height:640px;display:grid;place-items:center;perspective:1400px;position:relative}.orb{position:absolute;border-radius:50%;box-shadow:inset -15px -20px 40px rgba(0,0,0,.12),0 25px 60px rgba(25,118,255,.15)}.orb.one{width:92px;height:92px;right:3%;top:5%;background:linear-gradient(135deg,#fff,#69e7ff 45%,#2a62ff)}.orb.two{width:48px;height:48px;left:4%;bottom:13%;background:linear-gradient(135deg,#fff,#9b8aff,#4e56ff)}
+.browser{width:min(680px,100%);height:470px;border:9px solid #101b2a;border-radius:28px;background:#fff;box-shadow:0 55px 90px rgba(8,17,31,.22);transform:rotateY(-8deg) rotateX(4deg);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1);overflow:hidden}.bar{height:38px;background:#101b2a;display:flex;align-items:center;gap:6px;padding:0 12px}.bar i{width:7px;height:7px;border-radius:50%;background:#fff;opacity:.7}.url{height:22px;margin-left:10px;flex:1;border-radius:9px;background:#1d2b3e;color:#91a3b9;font-size:8px;padding:6px 10px}.site{height:calc(100% - 38px);background:linear-gradient(135deg,#fbfdff,#eef7ff);padding:26px 31px;position:relative;overflow:hidden}.site:after{content:"";position:absolute;width:280px;height:280px;right:-90px;top:25px;border-radius:50%;background:radial-gradient(circle,#71e6f5,transparent 66%);opacity:.5}.siteNav{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}.siteLogo{font:700 13px "Space Grotesk"}.siteLinks{display:flex;gap:17px;font-size:8px;color:#718198}.siteCta{font-size:8px;padding:8px 11px;border-radius:8px;color:#fff;background:#176eff}.siteHero{position:relative;z-index:2;width:55%;padding-top:57px}.siteHero small{font-size:7px;color:#176eff;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.siteHero h2{font:700 35px/.95 "Space Grotesk";letter-spacing:-.065em;margin:9px 0}.siteHero p{font-size:8px;line-height:1.7;color:#6e7e93;max-width:235px}.siteBtns{display:flex;gap:6px;margin-top:13px}.siteBtns span{font-size:7px;font-weight:800;padding:8px 11px;border-radius:7px;background:#176eff;color:#fff}.siteBtns span+span{background:#fff;color:#176eff;border:1px solid #dbe7f4}.mockCard{position:absolute;z-index:2;right:29px;top:112px;width:220px;height:190px;border-radius:19px;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.9);box-shadow:0 25px 45px rgba(25,75,130,.15);padding:13px;transform:rotate(-7deg)}.mockTop{height:9px;width:62%;border-radius:5px;background:#dbe9f7}.mockBig{height:83px;margin-top:12px;border-radius:12px;background:linear-gradient(135deg,#e5fbff,#77dcf0 55%,#4c6cff)}.mockRow{display:flex;gap:7px;margin-top:9px}.mockSmall{height:31px;flex:1;border-radius:9px;background:#eef4fb}.floatBadge{position:absolute;z-index:3;right:24px;bottom:50px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 13px;box-shadow:0 18px 35px rgba(25,65,110,.14);font-size:8px;font-weight:800;transform:translateZ(60px)}.floatBadge b{display:block;font:700 18px "Space Grotesk";color:var(--blue)}
+.section{padding:105px 0}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}.sectionHead h2{font:700 clamp(35px,5vw,58px)/.95 "Space Grotesk";letter-spacing:-.06em;margin:0}.sectionHead p{max-width:430px;color:var(--muted);line-height:1.7;margin:0}
+.process{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:25px;background:rgba(255,255,255,.72);box-shadow:var(--shadow);overflow:hidden}.step{padding:27px 22px;border-right:1px solid var(--line);min-height:170px}.step:last-child{border:0}.step b{display:flex;align-items:center;gap:10px;font-size:13px}.dot{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#edf7ff;color:var(--blue);font-weight:800}.step p{font-size:11px;line-height:1.65;color:var(--muted);margin:14px 0 0}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.panel{border:1px solid var(--line);border-radius:26px;background:var(--card);padding:30px;box-shadow:0 20px 65px rgba(25,65,110,.08);backdrop-filter:blur(18px)}.panel h3{font:700 24px "Space Grotesk";margin:0 0 16px}.panel p{color:var(--muted);line-height:1.75;font-size:13px}.checks{display:grid;gap:11px;margin-top:20px}.check{display:flex;gap:10px;align-items:center;font-size:12px}.check i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#e8fbff;color:#0aaec3;font-style:normal;font-weight:800}.features{display:grid;gap:9px}.feature{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;border-radius:14px;background:#f8fbff;border:1px solid rgba(8,17,31,.06);font-size:12px}.feature span{color:#8b98aa}
+.devices{display:grid;grid-template-columns:1fr 1fr;gap:18px}.device{border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#fff,#edf6ff);padding:22px;min-height:260px;position:relative;overflow:hidden}.device h3{font:700 22px "Space Grotesk";margin:0 0 6px}.device p{font-size:11px;color:var(--muted);max-width:270px;line-height:1.6}.miniBrowser{position:absolute;left:22px;right:22px;bottom:-32px;height:145px;border-radius:15px 15px 0 0;background:#fff;border:1px solid var(--line);box-shadow:0 15px 35px rgba(25,65,110,.13);padding:12px}.miniBrowser .line{height:8px;border-radius:4px;background:#e6eef7;margin-bottom:8px}.miniBrowser .heroLine{height:52px;border-radius:10px;background:linear-gradient(110deg,#dffbff,#7de2ef,#6878ff)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.metric{padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.72)}.metric strong{font:700 34px "Space Grotesk"}.metric span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.footer{padding:60px 0 90px;text-align:center}.footer a{color:var(--blue);font-weight:800;text-decoration:none}
+@media(max-width:900px){.links{display:none}.hero{grid-template-columns:1fr;padding-top:130px}.stage{height:530px}.browser{transform:scale(.86) rotateY(-8deg) rotateX(4deg)}.process{grid-template-columns:1fr 1fr}.step:nth-child(2n){border-right:0}.grid,.devices{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.hero{padding-bottom:20px}.stage{height:420px}.browser{transform:scale(.58) rotateY(-8deg) rotateX(4deg)}.process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.metrics{grid-template-columns:1fr}.section{padding:75px 0}.sectionHead{display:block}.sectionHead p{margin-top:15px}.siteHero h2{font-size:31px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="brand" href="../../index.html">PIYUSH PRASAD<span>.</span></a>
+<div class="links"><a href="#process">Process</a><a href="#overview">Overview</a><a href="#responsive">Responsive</a><a href="#contact">Contact</a></div>
+<a class="hire" href="#contact">Hire Me →</a>
+</nav>
+
+<main>
+<section class="wrap hero">
+<div>
+<a class="back" href="../../index.html#work">← Back to Work</a>
+<div class="eyebrow"><span class="num">01</span><span>Featured Project</span></div>
+<h1>Web <span class="gradient">Design</span></h1>
+<p class="lead">Premium landing pages, responsive layouts and visual direction.</p>
+<div class="actions"><a class="btn primary" href="#prototype">Explore Website ↘</a><a class="btn" href="#overview">View Case Study</a></div>
+</div>
+<div class="stage" id="prototype">
+<div class="orb one"></div><div class="orb two"></div>
+<div class="browser" id="browser">
+<div class="bar"><i></i><i></i><i></i><div class="url">nexora.design / home</div></div>
+<div class="site">
+<div class="siteNav"><div class="siteLogo">NEXORA<span style="color:#176eff">.</span></div><div class="siteLinks"><span>Work</span><span>Studio</span><span>About</span></div><div class="siteCta">Let's Talk</div></div>
+<div class="siteHero"><small>Digital Experience Studio</small><h2>Elevate your digital presence.</h2><p>Strategy, design and development for brands that want to move forward with clarity.</p><div class="siteBtns"><span>Start a project →</span><span>View work</span></div></div>
+<div class="mockCard"><div class="mockTop"></div><div class="mockBig"></div><div class="mockRow"><div class="mockSmall"></div><div class="mockSmall"></div></div></div>
+<div class="floatBadge"><b>98%</b>client satisfaction</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wrap section" id="process">
+<div class="sectionHead"><h2>The Process</h2><p>A focused web-design workflow that turns an idea into a clear, responsive and conversion-ready digital experience.</p></div>
+<div class="process">
+<div class="step"><b><span class="dot">01</span>Research</b><p>Understand the audience, goals, competition and visual direction.</p></div>
+<div class="step"><b><span class="dot">02</span>Design</b><p>Create the structure, visual language and high-fidelity interface.</p></div>
+<div class="step"><b><span class="dot">03</span>Develop</b><p>Build the responsive experience with clean interactions.</p></div>
+<div class="step"><b><span class="dot">04</span>Test</b><p>Check hierarchy, usability, spacing and responsive behavior.</p></div>
+<div class="step"><b><span class="dot">05</span>Launch</b><p>Polish the final experience and prepare it for handoff.</p></div>
+</div>
+</section>
+
+<section class="wrap section" id="overview">
+<div class="sectionHead"><h2>Project Overview</h2><p>A self-initiated landing-page concept focused on premium visual direction, clarity and responsive storytelling.</p></div>
+<div class="grid">
+<article class="panel"><h3>Visual Direction</h3><p>A spacious layout, strong typography, soft gradients and layered UI elements create a premium digital-studio feel while keeping the content easy to scan.</p><div class="checks"><div class="check"><i>✓</i>Clear visual hierarchy</div><div class="check"><i>✓</i>Responsive-first structure</div><div class="check"><i>✓</i>Conversion-focused CTAs</div><div class="check"><i>✓</i>Consistent design system</div></div></article>
+<article class="panel"><h3>Key Sections</h3><div class="features"><div class="feature">Hero & visual direction <span>→</span></div><div class="feature">Services / capabilities <span>→</span></div><div class="feature">Selected work <span>→</span></div><div class="feature">Social proof <span>→</span></div><div class="feature">Contact CTA <span>→</span></div></div></article>
+</div>
+</section>
+
+<section class="wrap section" id="responsive">
+<div class="sectionHead"><h2>Responsive Design</h2><p>The same visual system adapts across desktop and mobile without losing hierarchy or interaction clarity.</p></div>
+<div class="devices">
+<div class="device"><h3>Desktop Experience</h3><p>Wide layouts give the hero, navigation and visual composition room to breathe.</p><div class="miniBrowser"><div class="line" style="width:28%"></div><div class="heroLine"></div><div class="line" style="width:72%;margin-top:9px"></div></div></div>
+<div class="device"><h3>Mobile Experience</h3><p>Compact stacking, touch-friendly controls and simplified spacing keep the experience comfortable.</p><div class="miniBrowser" style="left:55px;right:55px;height:175px"><div class="line" style="width:40%"></div><div class="heroLine" style="height:80px"></div><div class="line" style="width:80%;margin-top:9px"></div></div></div>
+</div>
+<div class="metrics"><div class="metric"><strong>01</strong><span>Design system</span></div><div class="metric"><strong>5</strong><span>Core sections</span></div><div class="metric"><strong>3</strong><span>Responsive breakpoints</span></div><div class="metric"><strong>100%</strong><span>Interactive concept</span></div></div>
+</section>
+
+<section class="wrap section" id="contact"><div class="panel" style="text-align:center;padding:55px 30px"><h2 style="font:700 clamp(36px,6vw,70px)/.95 'Space Grotesk';letter-spacing:-.06em;margin:0 0 15px">Need a premium website?</h2><p style="max-width:600px;margin:0 auto 25px;color:var(--muted)">Let's turn your idea into a clean, responsive website with strong visual direction.</p><a class="btn primary" href="mailto:your-email@example.com">Start a Project →</a></div></section>
+</main>
+<footer class="wrap footer"><a href="../../index.html">← Back to Piyush's Portfolio</a></footer>
+<script>
+const browser=document.getElementById('browser'),stage=document.querySelector('.stage');
+stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;browser.style.transform=`rotateY(${-8+x*8}deg) rotateX(${4-y*6}deg)`});
+stage.addEventListener('pointerleave',()=>browser.style.transform='rotateY(-8deg) rotateX(4deg)');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.animate([{opacity:0,transform:'translateY(22px)'},{opacity:1,transform:'translateY(0)'}],{duration:700,easing:'cubic-bezier(.2,.8,.2,1)',fill:'forwards'})}),{threshold:.12});
+document.querySelectorAll('.section,.panel,.process,.devices').forEach(el=>{el.style.opacity=0;io.observe(el)});
+</script>
+</body>
+</html>
